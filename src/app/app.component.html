@@ -1,0 +1,19 @@
+<app-header />
+
+<main>
+  <mat-list role="list" id="users">
+    <mat-list-item role="listitem">
+      <app-user
+        [user]="users[0]"
+        (select)="onSelectUser($event)"
+      />
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <app-user
+        [user]="users[1]"
+        (select)="onSelectUser($event)"
+      />
+    </mat-list-item>
+  </mat-list>
+  <app-tasks [user]="selectedUser" />
+</main>
